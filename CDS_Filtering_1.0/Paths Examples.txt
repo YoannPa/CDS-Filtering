@@ -1,0 +1,11 @@
+G:/Stage M1/Genomique/CDS collection/test.txt
+G:/Stage M1/Genomique/Predictions Augustus/augustus saccharomyces_cerevisiae_S288C/augustus.cdsexons
+
+G:/temporary1.txt
+
+G:/temporary2.txt
+
+G:/Stage M1/Genomique/CDS collection/output.txt
+G:/Stage M1/Genomique/CDS collection/ScerevisiaeCDSlistfiltered.txt
+
+G:/Stage M1/Genomique/CDS collection/SummaryFilter.txt
