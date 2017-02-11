@@ -1,0 +1,114 @@
+CDS Filtering: 
+Filtering Coding Sequences (CDSs) depending on their lengths and their
+occurancies. 
+Version 2.0
+Compatible Python version 2.7.12
+Last Update: 19/01/2017
+
+#Prerequesite:
+
+*Uncompress CDS_Filtering_2.0.tar.gz file:
+The folder should contain the following files:
+	CDSFilteringV2.py
+	README
+	CDS Filtering Icon.png
+
+*Install Python version 2.7.12:
+	sudo apt install python 
+
+*Update pip:
+	sudo apt install --upgrade pip
+
+*Install the following requisite python packages:
+	argparse
+	os
+	re
+	
+If some packages are already installed, upgrade them.
+Run the following command in your terminal:
+	sudo pip install --upgrade <Package_Name>
+
+
+#Short description of CDS Filtering 2.0:
+CDS Filtering 2.0 aims at parsing and filtering CDS contained in a (multi)Fasta
+file.
+It has two types of filtering:
+	- Filtering on CDSs lengths.
+	- Filtering out CDSs that occur multiple time in the file.
+The version 1.0 is available to downloads at : 
+researchgate.net/publication/303910491_CDS_Filtering_Program
+
+
+#Used packages description:
+
+*argparse:  package used to allow the user to run the program
+with additionnal parameters as arguments in the same command line.
+
+*os: package used to call various operating system functionalities. 
+
+*re: package allowing the use of regular expressions in the program.
+ 
+#Copyrights: "Copyleft"
+
+
+#Running CDS Filtering 2.0:
+
+*Launch the terminal.
+
+*Change the working directory to the one where CDS Filtering 2.0 is
+located (use the 'cd' command).
+
+*Once the working directory defined as the CDS Filtering 2.0 folder, read
+the help associated to the used of the main script CDSFilteringV2.py:
+	python CDSFilteringV2.py -h
+
+*Help should be displayed as shown below:
+usage: CDSFilteringV2.py [-h] [-m MINIMUM_LENGTH] [-M MAXIMUM_LENGTH]
+                         CDS_List Temp_File1 Temp_File2 Output_File
+                         Summary_File
+
+positional arguments:
+  CDS_List              Path to the file containing your CDSs (No header in
+                        the file).
+  Temp_File1            Name of the 1st temporary file.
+  Temp_File2            Name of the 2nd temporary file.
+  Output_File           Name of the output file that will contain your list of
+                        CDS.
+  Summary_File          Name of the summary file that will contain parameters
+                        you selected.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -m MINIMUM_LENGTH, --minimum_length MINIMUM_LENGTH
+                        Minimum value for the length of the CDS (has to be an
+                        integer > or = 0).
+  -M MAXIMUM_LENGTH, --Maximum_length MAXIMUM_LENGTH
+                        Maximum value for the length of the CDS (has to be an
+                        integer > or = 0).
+
+*Add to the command line the files as arguments in this order:
+	python CDSFilteringV2.py CDS_list_file Temp_file1 Temp_file2 Output_file
+	Summary_file
+
+	WARNINGS: 
+	The CDS_list_file must not contain any header at the 1st line of your
+	file.
+	The CDS_list_file must have only one CDS per line.
+	The values of minimum_length and Maximum_length has to be integers. 
+
+*You can also specify optionnal values for minimum_length and Maximum_length
+	Examples:
+	python CDSFilteringV2.py CDS_list_file Temp_file1 Temp_file2 Output_file
+	Summary_file -m 10 -M 100
+
+	With this command line the program will only keep CDSs having a length
+	between 10 and 100 nucleotides.
+
+*Press 'Enter' key. EpiAnnotator should start.
+
+
+#Authors: Yoann PAGEAUD - DKFZ, Germany.
+
+
+#Report an error:
+	E-mail: y.pageaud@dkfz-heidelberg.de 
